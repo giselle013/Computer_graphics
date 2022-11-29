@@ -14,12 +14,12 @@ namespace DigitalRuby.RainMaker
 
         private enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
         private RotationAxes axes = RotationAxes.MouseXAndY;
-        private float sensitivityX = 15F;
-        private float sensitivityY = 15F;
-        private float minimumX = -360F;
-        private float maximumX = 360F;
-        private float minimumY = -60F;
-        private float maximumY = 60F;
+        public float sensitivityX = 15F;
+        public float sensitivityY = 15F;
+        public float minimumX = -360F;
+        public float maximumX = 360F;
+        public float minimumY = -60F;
+        public float maximumY = 60F;
         private float rotationX = 0F;
         private float rotationY = 0F;
         private Quaternion originalRotation;
@@ -75,20 +75,11 @@ namespace DigitalRuby.RainMaker
 
         private void UpdateMouseLook()
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.M))
-            {
-                MouseLookToggle.isOn = !MouseLookToggle.isOn;
-            }
-
-            if (!MouseLookToggle.isOn)
-            {
-                return;
-            }
-            else if (axes == RotationAxes.MouseXAndY)
+            if (axes == RotationAxes.MouseXAndY)
             {
                 // Read the mouse input axis
-                rotationX += Input.GetAxis("Mouse X") * sensitivityX;
-                rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+                rotationX += Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
+                rotationY += Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
 
                 rotationX = ClampAngle(rotationX, minimumX, maximumX);
                 rotationY = ClampAngle(rotationY, minimumY, maximumY);
