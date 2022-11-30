@@ -1,8 +1,11 @@
 # Computer_graphics
 
-Se plantea desarrollar una escena nocturna de un bosque con montañas, neblina y lluvia con una iluminación sencilla para poder divisar algo del paisaje. Con una sirena de fondo para ambientar la escena como si algo inusual estuviera pasando. 
+Se plantea desarrollar una escena nocturna de un bosque con montañas y lluvia con una iluminación sencilla para poder divisar algo del paisaje. Con una sirena de fondo para ambientar la escena como si algo inusual estuviera pasando. 
 Presionando la tecla "k" cae un rayo dando una mejor iluminación del paisaje donde se podrá ver la silueta de un ser extraño asechando en el bosque.
 Hecho en Unity.
+
+Video de Youtube: https://youtu.be/ZOhdEDvjWyA
+Capturas de pantalla: https://drive.google.com/drive/folders/1thE_AR_xEWjGCXX-TZUp3WzqfAywYY0z?usp=sharing
 
 Assets:
  
